@@ -1,0 +1,4 @@
+name: JoeyCustomEnchantedItems
+version: '1.0'
+main: me.shrob.joeycustomenchanteditems.JoeyCustomEnchantedItems
+api-version: '1.20'
