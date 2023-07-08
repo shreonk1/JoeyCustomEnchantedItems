@@ -24,5 +24,6 @@ public class RecipeRegister {
         EnchantedObsidian enchantedObsidian = new EnchantedObsidian("enchantedObsidian");
         EnchantedDiamondBlock enchantedDiamondBlock = new EnchantedDiamondBlock("enchantedDiamondBlock");
         EnchantedCoalBlock enchantedCoalBlock = new EnchantedCoalBlock("enchantedCoalBlock");
+        EnchantedCopperBlock enchantedCopperBlock = new EnchantedCopperBlock("enchantedCopperBlock");
     }
 }

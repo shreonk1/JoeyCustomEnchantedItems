@@ -25,6 +25,7 @@ public class ListenerRegister {
         JoeyCustomEnchantedItems.pm.registerEvents(new EnchantedObsidian("enchantedObsidian"), JoeyCustomEnchantedItems.instance);
         JoeyCustomEnchantedItems.pm.registerEvents(new EnchantedDiamondBlock("enchantedDiamondBlock"), JoeyCustomEnchantedItems.instance);
         JoeyCustomEnchantedItems.pm.registerEvents(new EnchantedCoalBlock("enchantedCoalBlock"), JoeyCustomEnchantedItems.instance);
+        JoeyCustomEnchantedItems.pm.registerEvents(new EnchantedCopperBlock("enchantedCopperBlock"), JoeyCustomEnchantedItems.instance);
     }
 }
 
