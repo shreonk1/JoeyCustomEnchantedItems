@@ -10,6 +10,7 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ShapedRecipe;
 
@@ -23,5 +24,10 @@ public class EnchantedMangrove extends CustomItem implements Listener {
         sr.shape(" M ", "MMM", " M ");
         sr.setIngredient('M', Material.MANGROVE_LOG);
         Bukkit.addRecipe(sr);
+    }
+
+    @Override
+    public void onCraft(PrepareItemCraftEvent e) {
+
     }
 }

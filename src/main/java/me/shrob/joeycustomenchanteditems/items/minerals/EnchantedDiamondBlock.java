@@ -1,15 +1,17 @@
 package me.shrob.joeycustomenchanteditems.items.minerals;
 
-import me.shrob.joeycustomenchanteditems.*;
+import me.shrob.joeycustomenchanteditems.ItemBuilder;
+import me.shrob.joeycustomenchanteditems.JoeyCustomEnchantedItems;
+import me.shrob.joeycustomenchanteditems.Rarities;
+import me.shrob.joeycustomenchanteditems.Utils;
 import me.shrob.joeycustomenchanteditems.items.CustomItem;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.inventory.ItemFlag;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
 
 public class EnchantedDiamondBlock extends CustomItem implements Listener {
@@ -23,5 +25,10 @@ public class EnchantedDiamondBlock extends CustomItem implements Listener {
         sr.shape(" D ", "DDD", " D ");
         sr.setIngredient('D', enchantedDiamond.itemStack);
         Bukkit.addRecipe(sr);
+    }
+
+    @Override
+    public void onCraft(PrepareItemCraftEvent e) {
+
     }
 }

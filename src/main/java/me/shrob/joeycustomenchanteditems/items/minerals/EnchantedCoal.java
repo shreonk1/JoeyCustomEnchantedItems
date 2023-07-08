@@ -9,7 +9,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.inventory.*;
@@ -26,15 +25,14 @@ public class EnchantedCoal extends CustomItem implements Listener {
         sr.setIngredient('C', Material.COAL);
         Bukkit.addRecipe(sr);
     }
-
-    @EventHandler
+    @Override
     public void onCraft(PrepareItemCraftEvent e) {
         CraftingInventory inventory = e.getInventory();
         ItemStack[] matrix = inventory.getMatrix();
         int[] amounts = this.amounts;
 
         for(int i = 0; i < 9; i++) {
-            if(amounts[i] == 0) continue;
+            if(amounts[i] == 32) continue;
             if(matrix[i].equals(amounts[i])) continue;
             inventory.setResult(null);
         }

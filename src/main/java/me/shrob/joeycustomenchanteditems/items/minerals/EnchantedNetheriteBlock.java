@@ -12,23 +12,18 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.inventory.ItemFlag;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
-import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class EnchantedCopper extends CustomItem implements Listener {
-
-    public EnchantedCopper(String name) {
+public class EnchantedNetheriteBlock extends CustomItem implements Listener {
+    public EnchantedNetheriteBlock(String name) {
         super(name);
-        NamespacedKey key = NamespacedKey.minecraft("enchanted_copper_ingot");
-        this.itemStack = new ItemBuilder(Material.COPPER_INGOT, 1, key, Utils.addColour(Rarities.UNCOMMON.getString())).setDisplayName(Utils.addColour("&2Enchanted Copper")).addEnchants(Enchantment.LUCK, 1).addItemFlag(ItemFlag.HIDE_ENCHANTS).toItemStack();
+        NamespacedKey key = new NamespacedKey(JoeyCustomEnchantedItems.instance, "enchanted_netherite_block");
+        CustomItem enchantedNetherite = JoeyCustomEnchantedItems.customItems.get("enchantedNetherite");
+        this.itemStack = new ItemBuilder(Material.NETHERITE_BLOCK, 1, key, Utils.addColour(Rarities.RARE.getString())).addEnchants(Enchantment.LUCK, 1).addItemFlag(ItemFlag.HIDE_ENCHANTS).setDisplayName(Utils.addColour("&9Enchanted Netherite Block")).toItemStack();
 
         ShapedRecipe sr = new ShapedRecipe(key, this.itemStack);
-        sr.shape(" C ", "CCC", " C ");
-        sr.setIngredient('C', Material.COPPER_INGOT);
+        sr.shape(" N ", "NNN", " N ");
+        sr.setIngredient('N', enchantedNetherite.itemStack);
         Bukkit.addRecipe(sr);
     }
 

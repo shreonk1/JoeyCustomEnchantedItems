@@ -11,6 +11,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
 
@@ -72,6 +73,8 @@ public abstract class CustomItem {
 
     public void onPickupXp(PlayerExpChangeEvent event) {}
 
+    public void onCraftEvent(PrepareItemCraftEvent event) {}
+
     public ItemStack getItemStack() {
         return this.itemStack;
     }
@@ -79,4 +82,6 @@ public abstract class CustomItem {
     public String getName() {
         return this.name;
     }
+
+    public abstract void onCraft(PrepareItemCraftEvent e);
 }

@@ -2,3 +2,8 @@ name: JoeyCustomEnchantedItems
 version: '${project.version}'
 main: me.shrob.joeycustomenchanteditems.JoeyCustomEnchantedItems
 api-version: '1.20'
+
+commands:
+  recipes:
+    description: opens the maingui for the recipes
+
