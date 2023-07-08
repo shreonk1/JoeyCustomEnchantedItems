@@ -14,6 +14,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
+import java.util.logging.Logger;
 
 public final class JoeyCustomEnchantedItems extends JavaPlugin {
 
@@ -22,6 +23,7 @@ public final class JoeyCustomEnchantedItems extends JavaPlugin {
     public static ListenerRegister lr = new ListenerRegister();
     public static HashMap<String, CustomItem> customItems = new HashMap<>();
     public static PluginManager pm = Bukkit.getPluginManager();
+    public static Logger log = Bukkit.getLogger();
     public static ItemStack backArrow = new ItemStack(Material.ARROW, 1);
     public static ItemStack closeBarrier = new ItemStack(Material.BARRIER, 1);
 
